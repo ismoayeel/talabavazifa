@@ -99,7 +99,7 @@ class myclass(QWidget):
 
         if self.ism_edit.text() != "" and list(self.ism_edit.text())[0].isupper():
             if self.sharif_edit.text() != "" and list(self.sharif_edit.text())[0].isupper():
-                if self.yosh_edit.text() != "" and int(self.yosh_edit.text()) > 10 and int(self.yosh_edit.text()) < 100:
+                if self.yosh_edit.text().isdigit() and self.yosh_edit.text() != "" and int(self.yosh_edit.text()) > 10 and int(self.yosh_edit.text()) < 100:
                     if self.telefon_edit.text() != "" and list(self.telefon_edit.text())[0] == "+" and len(self.telefon_edit.text()) == 13:
                         if self.erkak_radio_btn.isChecked() or self.ayol_radio_btn.isChecked():
                             if self.viloyat_cmb.currentText() != "":
